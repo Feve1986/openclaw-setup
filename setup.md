@@ -136,7 +136,7 @@ openclaw logs --follow
 | `im:message:send_as_bot` | 以应用身份发消息 | ✅ 必需 | 以机器人身份回复 |
 | `contact:contact.base:readonly` | 获取通讯录基本信息 | ✅ 必需 | 识别用户身份 |
 
-> 💡 **为什么需要 `contact:contact.base:readonly` 权限？**
+> 💡 **只需要再添加最后这个权限即可，为什么需要 `contact:contact.base:readonly` 权限？**
 > 
 > 这个权限用于获取用户的基本信息（如用户名、部门等），OpenClaw需要这些信息来：
 > - ✅ 识别消息发送者
