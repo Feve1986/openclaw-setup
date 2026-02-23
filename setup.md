@@ -191,3 +191,31 @@ export OPENCLAW_GATEWAY_TOKEN="your-secure-token"
 在飞书中找到您创建的机器人，发送一条消息，例如："hi"。
 
 **在日志中应该能看到：**
+
+#### 3. 配对授权
+
+默认情况下（`dmPolicy: "pairing"`），机器人会回复一个 **配对码**。您需要批准此代码：
+
+```bash
+# 查看待审批的配对请求
+openclaw pairing list feishu
+
+# 批准配对（替换 <配对码> 为实际收到的代码）
+openclaw pairing approve feishu <配对码>
+
+# 示例
+openclaw pairing approve feishu ABC123
+```text
+批准后即可正常对话。
+
+**如果不想使用配对模式：**
+```json
+{
+  "channels": {
+    "feishu": {
+      "dmPolicy": "open",
+      "allowFrom": ["*"]
+    }
+  }
+}
+```text
