@@ -105,6 +105,18 @@ openclaw logs --follow       # 查看实时日志
 ⚠️ **重要提醒**：在配置事件订阅前，请务必确保已完成以下步骤：
 1. 运行 `openclaw channels add` 添加了 Feishu 渠道
 2. 网关处于启动状态（可通过 `openclaw gateway status` 检查状态）
+3. 启动网关
+
+```bash
+# 安装并启动网关
+openclaw gateway install
+
+# 检查网关状态
+openclaw gateway status
+
+# 查看实时日志
+openclaw logs --follow
+```text
 
 在 **事件订阅** 页面：
 
@@ -173,22 +185,6 @@ export OPENCLAW_GATEWAY_TOKEN="your-secure-token"
 1. 在 **版本管理与发布** 页面创建版本
 2. 提交审核并发布
 3. 等待管理员审批（企业自建应用通常自动通过）
-
-### 9.1.5 第三步：启动并测试
-
-#### 1. 启动网关
-
-```bash
-# 安装并启动网关
-openclaw gateway install
-
-# 检查网关状态
-openclaw gateway status
-
-# 查看实时日志
-openclaw logs --follow
-```text
-**网关启动成功的标志：**
 
 #### 2. 发送测试消息
 
