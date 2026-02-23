@@ -103,7 +103,7 @@ openclaw logs --follow       # 查看实时日志
 #### 6. 配置事件订阅
 
 ⚠️ **重要提醒**：在配置事件订阅前，请务必确保已完成以下步骤：
-1. 运行 `openclaw channels add` 添加了 Feishu 渠道
+1. 运行 `openclaw channels add` 添加了 Feishu 渠道，并且已经添加了应用的appid和secret。
 2. 网关处于启动状态（可通过 `openclaw gateway status` 检查状态）
 3. 启动网关
 
